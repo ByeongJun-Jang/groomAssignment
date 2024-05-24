@@ -20,6 +20,9 @@ jobs:
         run: ./gradlew clean build
         env:
           SPRING_PROFILES_ACTIVE: ci
+          RDS_DB_URL: ${{ secrets.RDS_DB_URL }}
+          RDS_DB_USERNAME: ${{ secrets.RDS_DB_USERNAME }}
+          RDS_DB_PASSWORD: ${{ secrets.RDS_DB_PASSWORD }}
 
       - name: Make zip
         run: zip -qq -r ./tricount.zip .
