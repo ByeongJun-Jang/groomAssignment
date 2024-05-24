@@ -44,7 +44,6 @@ jobs:
             --deployment-group-name group1 \
             --s3-location bucket=groom-ass-bucket,bundleType=zip,key=tricount.zip
 
-
 #name: CI
 #
 #on:
