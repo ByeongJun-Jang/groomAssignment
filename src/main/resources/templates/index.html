@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="header_nav">
+    <a th:if="${session.isLogin}" th:href="@{/members/edit}"><span>정산 |</span></a>
+    <a th:if="${session.isLogin}" th:href="@{/logout}"><span>로그아웃</span></a>
+    <a th:unless="${session.isLogin}" th:href="@{/login/loginForm}"><span>로그인 |</span></a>
+    <a th:unless="${session.isLogin}" th:href="@{/member/register}"><span>회원가입</span></a>
+</div>
+    <a href="/swagger-ui/index.html">Swagger Api</a>
+</body>
+</html>

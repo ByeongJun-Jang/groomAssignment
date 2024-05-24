@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Settlements</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Settlements</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Payer</th>
+            <th scope="col">Receiver</th>
+            <th scope="col">Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="settlement : ${settlements}">
+            <td th:text="${settlement.payer.name}">Payer Name</td>
+            <td th:text="${settlement.receiver.name}">Receiver Name</td>
+            <td th:text="${settlement.amount}">Amount</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

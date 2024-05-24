@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Record Transaction</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2>Record Transaction</h2>
+    <form th:action="@{/api/transactions}" method="post">
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+        <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+</div>
+<div class="mb-3">
+    <label for="payer" class="form-label">Payer</label>
+    <select class="form-select" id="payer" name="payer" required>
+        <option value="">Choose...</option>
+        <option th:each="user : ${users}" th:value="${user.id}" th:text="${user.name}">Name</option>
+    </select>
+</div>
+<button type="submit" class="btn btn-primary">Record Transaction</button>
+</form>
+</div>
+</body>
+</html>
+
