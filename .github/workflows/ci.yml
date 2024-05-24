@@ -18,6 +18,8 @@ jobs:
 
       - name: build
         run: ./gradlew clean build
+        env:
+          SPRING_PROFILES_ACTIVE: ci
 
       - name: make zip
         run: zip -qq -r ./tricount.zip .
