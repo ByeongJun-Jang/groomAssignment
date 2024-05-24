@@ -1,11 +1,17 @@
 package proj.tricount.domain.settlement;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Data
+@Entity
 public class Expense {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long expenseId;
 
     private Long settlementId;
