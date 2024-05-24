@@ -44,6 +44,7 @@ jobs:
             --deployment-group-name group1 \
             --s3-location bucket=groom-ass-bucket,bundleType=zip,key=tricount.zip
 
+
 #name: CI
 #
 #on:
@@ -74,7 +75,7 @@ jobs:
 #        run: zip -qq -r ./tricount.zip .
 #
 #      - name: Configure AWS Credentials
-#        uses: aws-actions/configure-aws-credentials@v2
+#        uses: aws-actions/configure-aws-credentials@v3
 #        with:
 #          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
 #          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
@@ -90,6 +91,7 @@ jobs:
 #            --deployment-group-name group1 \
 #            --s3-location bucket=groom-ass-bucket,bundleType=zip,key=tricount.zip
 #
+
 
 #name: CI
 #
