@@ -16,12 +16,12 @@ jobs:
         with:
           java-version: '17'
 
-      - name: build
+      - name: Build with Gradle
         run: ./gradlew clean build
         env:
           SPRING_PROFILES_ACTIVE: ci
 
-      - name: make zip
+      - name: Make zip
         run: zip -qq -r ./tricount.zip .
 
       - name: Configure AWS Credentials
